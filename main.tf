@@ -23,3 +23,7 @@ resource "aws_vpc" "main" {
 
 }
 
+output "vpc_cidr_block" {
+    description = "The CIDR block of the VPC"
+    value = aws_vpc.main.cidr_block
+}
