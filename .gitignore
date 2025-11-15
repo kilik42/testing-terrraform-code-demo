@@ -1,0 +1,88 @@
+# -------------------------------------------------------------------
+# TERRAFORM STATE & PLAN FILES
+# -------------------------------------------------------------------
+# Local Terraform state
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Backup files
+*.backup
+*.tfvars.backup
+
+# Ignore any tfplan files
+*.tfplan
+
+# -------------------------------------------------------------------
+# SENSITIVE VARIABLE FILES
+# -------------------------------------------------------------------
+# Ignore tfvars files (often contain secrets)
+*.tfvars
+*.auto.tfvars
+
+# But keep example vars
+!terraform.tfvars.example
+!*.tfvars.example
+
+# -------------------------------------------------------------------
+# MODULE & PROVIDER DOWNLOADS
+# -------------------------------------------------------------------
+# Terraform cached modules
+.terraform/
+.terraformrc
+
+# Local override files (these are not meant for repo)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# -------------------------------------------------------------------
+# LOCK FILES
+# -------------------------------------------------------------------
+# If you do NOT want to commit lock file (optional)
+# (You said earlier you want to EXCLUDE lock files)
+terraform.lock.hcl
+
+# -------------------------------------------------------------------
+# IDE / EDITOR / OS FILES
+# -------------------------------------------------------------------
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains / IntelliJ / PyCharm / GoLand
+.idea/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Linux system files
+*~
+
+# Logs
+*.log
+
+# -------------------------------------------------------------------
+# LOCAL CONFIG / CREDS
+# -------------------------------------------------------------------
+# AWS CLI credentials (never store these)
+.aws/
+*.pem
+*.key
+
+# Local environment files
+.env
+*.env
+.env.*
