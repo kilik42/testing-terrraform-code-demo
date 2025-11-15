@@ -35,3 +35,27 @@ resource "aws_route_table" "private" {
     Name = "private_route_table"
   }
 }
+
+# route association for public subnet 1a
+resource "aws_route_table_association" "public_1a" {
+  subnet_id      = aws_subnet.main_subnet_public_1a.id
+  route_table_id = aws_route_table.main.id
+}
+
+# route association for public subnet 1b
+resource "aws_route_table_association" "public_1b" {
+  subnet_id      = aws_subnet.main_subnet_public_1b.id
+  route_table_id = aws_route_table.main.id
+}
+
+# route association for private subnet 1a
+resource "aws_route_table_association" "private_1a" {
+  subnet_id      = aws_subnet.main_subnet_private_1a.id
+  route_table_id = aws_route_table.private.id
+}
+
+# route association for private subnet 1b
+resource "aws_route_table_association" "private_1b" {
+  subnet_id      = aws_subnet.main_subnet_private_1b.id
+  route_table_id = aws_route_table.private.id
+}

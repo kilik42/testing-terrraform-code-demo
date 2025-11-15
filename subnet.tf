@@ -31,7 +31,7 @@ resource "aws_subnet" "main_subnet_private_1a" {
     cidr_block        = "10.0.11.0/24"
     availability_zone = "eu-west-1a"
 
-    # route_table_id = aws_route_table.private.id
+    
 
   tags = {
     Name = "main_subnet"
