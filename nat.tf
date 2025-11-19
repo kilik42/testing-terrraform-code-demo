@@ -5,7 +5,7 @@
 # A NAT Gateway requires an Elastic IP address to enable outbound internet access for instances
 
 resource "aws_eip" "nat_eip" {
-  vpc = true
+  # vpc = true
 
   tags = {
     Name = "nat_eip"
@@ -23,5 +23,6 @@ resource "aws_nat_gateway" "main" {
   tags = {
     Name = "main_nat_gateway"
   }
+  depends_on = [ aws_internet_gateway.main_igw]
 }
 
