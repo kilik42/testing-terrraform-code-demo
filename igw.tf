@@ -5,5 +5,8 @@ resource "aws_internet_gateway" "main" {
 
   tags = {
     Name = "main_internet_gateway"
+    Service = "internet_gateway"
+    Owner = "marvin"
+
   }
 }

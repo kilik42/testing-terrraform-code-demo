@@ -8,7 +8,7 @@ resource "aws_subnet" "main_subnet_public_1a" {
   availability_zone = "eu-west-1a"
 
   tags = {
-    Name = "main_subnet"
+    Name = "subnet-public-1a"
   }
 }
 
@@ -19,31 +19,31 @@ resource "aws_subnet" "main_subnet_public_1b" {
     availability_zone = "eu-west-1b"
 
   tags = {
-    Name = "main_subnet"
+    Name = "subnet-public-1b"
   }
 }
 
 #PRIVATE SUBNETS
 # how do i tie this to the private route table?
-resource "aws_subnet" "main_subnet_private_1a" {
+resource "aws_subnet" "main_subnet_private_2a" {
 
     vpc_id            = aws_vpc.main.id
     cidr_block        = "10.0.11.0/24"
-    availability_zone = "eu-west-1a"
+    availability_zone = "eu-west-2a"
 
     
 
   tags = {
-    Name = "main_subnet"
+    Name = "subnet-private-1a"
   }
 }
 
-resource "aws_subnet" "main_subnet_private_1b" {
+resource "aws_subnet" "main_subnet_private_2b" {
     vpc_id            = aws_vpc.main.id
     cidr_block        = "10.0.12.0/24"
-    availability_zone = "eu-west-1b"
+    availability_zone = "eu-west-2b"
 
   tags = {
-    Name = "main_subnet"
+    Name = "subnet-private-1b"
   }
 }   
