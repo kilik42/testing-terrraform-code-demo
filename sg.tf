@@ -89,3 +89,22 @@ output "security_group_1_id" {
 }
 
 
+#security group for load balancer
+resource "aws_security_group" "lb_sg" {   
+  name        = "lb_security_group"
+  description = "Security group for load balancer"
+  vpc_id      = aws_vpc.main.id
+
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
